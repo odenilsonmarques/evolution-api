@@ -37,5 +37,16 @@ services:
     ports:
       - "8080:8080"
 
+  bot-dev:
+    build: ../bot-dev
+    container_name: bot_dev
+    restart: always
+    env_file:
+      - ../bot-dev/.env
+    depends_on:
+      - api
+    ports:
+      - "3002:3001"
+
 volumes:
   postgres_data:
