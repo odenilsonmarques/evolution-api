@@ -47,6 +47,8 @@ services:
       - api
     ports:
       - "3002:3001"
+    volumes:
+      - ../bot-dev/data:/app/data
 
 volumes:
   postgres_data:
