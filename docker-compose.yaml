@@ -45,8 +45,8 @@ services:
       - ../bot-dev/.env
     depends_on:
       - api
-    ports:
-      - "3002:3001"
+    # ports:
+    #   - "3002:3001"
     volumes:
       - ../bot-dev/data:/app/data
 
